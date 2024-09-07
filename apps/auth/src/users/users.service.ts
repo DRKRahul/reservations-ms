@@ -7,7 +7,6 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UserRepository } from './users.repository';
 import * as bcrypt from 'bcryptjs';
 import { GetUserDto } from './dto/get-user.dto';
-import { UserDocument } from './models/user.schema';
 
 @Injectable()
 export class UsersService {
