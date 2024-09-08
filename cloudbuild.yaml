@@ -5,16 +5,16 @@ steps:
       [
         'build',
         '-t',
-        'asia-south1-docker.pkg.dev/nest-reservation-ms/reservations/production'
-        '-f'
+        'asia-south1-docker.pkg.dev/nest-reservation-ms/reservations/production',
+        '-f',
         'apps/reservations/Dockerfile',
-        '.'
+        '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
         'push',
-        'asia-south1-docker.pkg.dev/nest-reservation-ms/reservations/production'
+        'asia-south1-docker.pkg.dev/nest-reservation-ms/reservations/production',
       ]
   #Auth
   - name: 'gcr.io/cloud-builders/docker'
@@ -22,33 +22,30 @@ steps:
       [
         'build',
         '-t',
-        'asia-south1-docker.pkg.dev/nest-reservation-ms/auth/production'
-        '-f'
+        'asia-south1-docker.pkg.dev/nest-reservation-ms/auth/production',
+        '-f',
         'apps/auth/Dockerfile',
-        '.'
+        '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
     args:
-      [
-        'push',
-        'asia-south1-docker.pkg.dev/nest-reservation-ms/auth/production'
-      ]
+      ['push', 'asia-south1-docker.pkg.dev/nest-reservation-ms/auth/production']
   #payments
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
         'build',
         '-t',
-        'asia-south1-docker.pkg.dev/nest-reservation-ms/payments/production'
-        '-f'
+        'asia-south1-docker.pkg.dev/nest-reservation-ms/payments/production',
+        '-f',
         'apps/payments/Dockerfile',
-        '.'
+        '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
         'push',
-        'asia-south1-docker.pkg.dev/nest-reservation-ms/payments/production'
+        'asia-south1-docker.pkg.dev/nest-reservation-ms/payments/production',
       ]
   #notifications
   - name: 'gcr.io/cloud-builders/docker'
@@ -56,14 +53,14 @@ steps:
       [
         'build',
         '-t',
-        'asia-south1-docker.pkg.dev/nest-reservation-ms/notifications/production'
-        '-f'
+        'asia-south1-docker.pkg.dev/nest-reservation-ms/notifications/production',
+        '-f',
         'apps/notifications/Dockerfile',
-        '.'
+        '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
         'push',
-        'asia-south1-docker.pkg.dev/nest-reservation-ms/notifications/production'
+        'asia-south1-docker.pkg.dev/nest-reservation-ms/notifications/production',
       ]
