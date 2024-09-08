@@ -64,3 +64,5 @@ steps:
         'push',
         'asia-south1-docker.pkg.dev/nest-reservation-ms/notifications/production',
       ]
+options:
+  logging: CLOUD_LOGGING_ONLY
